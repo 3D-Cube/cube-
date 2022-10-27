@@ -1,0 +1,60 @@
+body{
+     background: darkslategray;
+}
+
+.rotate{
+     width: 90px;
+     height: 90px;
+     top: calc(50% - 290px);
+     left: calc(50% - 190px);
+     position: absolute;
+     perspective: 800px;
+}
+.single-rb{
+     width: 210px;
+     height: 200px;
+     transform-style: preserve-3d;
+       animation: rotate 20s linear infinite;
+     top: calc(50% - 150px);
+     left: calc(50% - 100px);
+    transform: rotateX(-720deg) rotateY(-720deg) rotateZ(-360deg);
+
+}
+.single-rb img{
+     height: 400px;
+     width:  400px;
+}
+.single-rb div{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: calc(90% - 150px);
+    left: calc(50% - 150px);
+}
+.front-side{
+  transform: translateZ(200px);
+}
+.back-side{
+  transform: rotateY(180deg) translateZ(200px);
+}
+.left-side{
+  transform: rotateY(90deg) translateX(-1px) translateX(-199px);
+  transform-origin: left;
+}
+.right-side{
+  transform: rotateY(90deg) translateX(200px);
+  transform-origin: right;
+}
+.top-side{
+  transform: rotateX(90deg) translateY(-1px) translateY(-199px);
+transform-origin: top;
+}
+.bottom-side{
+  transform: rotateX(90deg) translateY(200px);
+  transform-origin: bottom;
+}
+@keyframes rotate {
+  100%{
+    transform: rotate(360deg);
+  }
+}
